@@ -1,0 +1,28 @@
+.Stats {
+  width: 100%;
+  font-size: 36px;
+}
+
+.Stats table {
+  margin: 100px auto;
+}
+
+.Stats th,
+.Stats td {
+  border-right: 1px solid black;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.Stats th {
+  border-bottom: 1px solid black;
+}
+
+.Stats td {
+  text-align: center;
+}
+
+.Stats th:last-child,
+.Stats td:last-child {
+  border-right: none;
+}

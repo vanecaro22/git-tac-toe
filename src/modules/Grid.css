@@ -18,7 +18,8 @@
   align-content: center;
   border-bottom: 3px solid black;
   flex-grow: 1;
-  flex-basis: auto;
+  flex-shrink: 1;
+  flex-basis: 100%;
 }
 
 .Row:last-child {
