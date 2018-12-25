@@ -1,26 +1,12 @@
 import React from "react";
-import "./TicTacToe.css";
 
-const Cell = ({ value }) => (
-  <div className="Cell">
-    <span className="Entry">{value}</span>
-  </div>
-);
+import Grid from "./Grid";
+import Board from "./Board";
 
-const Row = ({ row }) => (
-  <div className="Row">
-    {row.map((value, i) => (
-      <Cell key={i} value={value} />
-    ))}
-  </div>
-);
-
-const TicTacToe = ({ game }) => (
-  <div className="TicTacToe">
-    {game.map((row, i) => (
-      <Row key={i} row={row} />
-    ))}
-  </div>
+const TicTacToe = ({ moves }) => (
+  <Board>
+    <Grid moves={moves} />
+  </Board>
 );
 
 export default TicTacToe;

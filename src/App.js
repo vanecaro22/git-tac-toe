@@ -1,12 +1,7 @@
 import React from "react";
-import Board from "./modules/Board";
 import TicTacToe from "./modules/TicTacToe";
-import game from "./modules/game";
+import moves from "./yourMoves";
 
-const App = () => (
-  <Board>
-    <TicTacToe game={game} />
-  </Board>
-);
+const App = () => <TicTacToe moves={moves} />;
 
 export default App;
