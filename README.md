@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# To Play Git Tic-Tac-Toe
 
-## Available Scripts
+## Basics
 
-In the project directory, you can run:
+// (nts. look into steps to import repo)
 
-### `npm start`
+One team member should fork the repository and share the link with team member(s). This person should add all team members as collaborators in order for the team members to push to the repository. The team members in turn need to accept the email invite to collaborate before they can push.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To launch the project team member(s) should first clone the repository `git clone <your repo link>` (there is a convenient link to copy) on github, then `cd` into the directory and `yarn install`. To start the app `yarn start`. Decide who goes first with rock-paper-scissors. This person is team 'x'.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+In the `yourMoves.js` file, enter a single 'x' or 'o' in one of the nested arrays. Commit your move, first `git add .`. This adds all the files to staging, then add a sensible commit message, e.g. `git commit -m "Purvi: move 2"`. Finally `git push`.
 
-### `npm test`
+Other team members can then `git pull`, and see the updated "Git-Tac-Toe" board. Continue committing, pushing and pulling until there is a win, loss or draw. You can review the git commit history
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Update the `yourStats` file and reset your moves to keep playing until you are gitastic.
 
-### `npm run build`
+## Resolving a merge conflict
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next we will contrive a scenario where there is a merge conflict.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- two team members should enter a different move (e.g. one does x while the other does o), but in the same array position
+- one team member commits the changes
+- one team member pushes while the other pulls, the person who pulls will see an error, `CONFLICT (content): Merge conflict in src/yourMoves.js` and in their text editor, will see something like
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+<<<<<<< HEAD
+const moves = [[[o], [], []], [[], [], []], [[], [], []]];
+=======
+const moves = [[[x], [], []], [[], [], []], [[], [], []]];
+>>>>>>> c795855bcd7b4f7eb22088a375887de10c65aeb0
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+They should resolve the conflict based on rock-paper-scissors and commit and push.
