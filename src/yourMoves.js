@@ -1,6 +1,6 @@
 export const x = "❌";
 export const o = "⭕️";
 
-const moves = [[[], [], []], [[], [], []], [[], [], []]];
+const moves = [[[], [], []], [[], [x], []], [[], [], []]];
 
 export default moves;
