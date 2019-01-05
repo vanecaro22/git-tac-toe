@@ -1,4 +1,4 @@
-# To Play Git Tic-Tac-Toe
+# To Play Git-Tac-Toe
 
 ## Set up
 
