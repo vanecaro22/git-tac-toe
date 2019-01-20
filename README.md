@@ -32,4 +32,11 @@ const moves = [[[x], [], []], [[], [], []], [[], [], []]];
 
 ## Git branching
 
-TK.
+Typically we do not commit directly to master. Instead, in a conventional team git work flow we make changes to a branch of the repository and then give others a chance to review it before merging it into master. Let's play a few more games, but this time of **_git-branch_-Tac-Toe**.
+
+- branch off the master branch, while on master `git checkout -b purvi-move-1`
+- make and commit your move
+- push your branch to the remote repository `git push origin purvi-move-1`
+- on Github, make a pull request of your branch and ask a colleague to review it (if your move interferes with their winning strategy they may **request changes**! If this happens, resolve with rock-paper-scissors)
+- once your changes are reviewed, hit the button to squash and merge to master and `git pull` while on the master branch to see them locally
+
